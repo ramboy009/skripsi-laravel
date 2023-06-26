@@ -27,7 +27,7 @@
     </div>
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item {{ Request::route()->getName() && strpos(Request::route()->getName(), 'diagnosis') === 0 ? 'active' : ''}}">
-        <a class="nav-link" href="diagnosis">
+        <a class="nav-link" href="{{ route('diagnosis.index') }}">
             <i class="fas fa-stethoscope"></i>
             <span>Diagnosis</span></a>
     </li>
