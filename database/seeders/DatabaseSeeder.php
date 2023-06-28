@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Hepatitis;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $hepatitis = ["Hepatitis A","Hepatitis B", "Hepatitis C", "Hepatitis D"];
+        foreach ($hepatitis as $h) {
+            Hepatitis::create([
+                'nama' => $h
+            ]);
+        }
     }
 }

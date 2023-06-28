@@ -2,17 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Symptomp;
 use Illuminate\Http\Request;
 
-class DiagnosisController extends Controller
+class KeteranganController extends Controller
 {
-    private $symptompModel;
-
-    public function __construct() {
-        $symptompModel = new Symptomp();
-        $this->symptompModel = $symptompModel;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +13,7 @@ class DiagnosisController extends Controller
      */
     public function index()
     {
-        return view('admin.diagnosis.diagnosis');
+        return view('admin.keterangan.keterangan');
     }
 
     /**
@@ -30,7 +23,7 @@ class DiagnosisController extends Controller
      */
     public function create()
     {
-        return view('admin.diagnosis.create');
+        return view('admin.keterangan.create');
     }
 
     /**
@@ -41,9 +34,7 @@ class DiagnosisController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        $this->symptompModel->newData($request);
-        return redirect()->back();
+        //
     }
 
     /**
@@ -65,7 +56,7 @@ class DiagnosisController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.diagnosis.edit');
+        return view('admin.keterangan.edit');
     }
 
     /**
