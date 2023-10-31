@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Symptomp;
 use App\Models\Hepatitis;
 use Illuminate\Database\Seeder;
 

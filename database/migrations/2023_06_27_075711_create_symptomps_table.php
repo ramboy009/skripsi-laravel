@@ -13,12 +13,15 @@ class CreateSymptompsTable extends Migration
      */
     public function up()
     {
-        Schema::create('symptomps', function (Blueprint $table) {
+        Schema::create('gejala', function (Blueprint $table) {
             $table->id();
-            $table->string("code")->unique();
+            $table->string("kriteria");
+            $table->string("kode_gejala")->unique();
             $table->string("nama");
             $table->string("ket")->nullable();
             $table->timestamps();
+
+            
         });
     }
 

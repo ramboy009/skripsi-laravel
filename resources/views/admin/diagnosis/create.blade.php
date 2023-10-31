@@ -15,8 +15,13 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
+                            <label for=""><b>Kriteria</b>    </label>
+                            <input type="text" name="kriteria" class="form-control" 
+                                placeholder="Masukan kode gejala">ko
+                        </div>
+                        <div class="form-group">
                             <label for=""><b>Kode Gejala</b>    </label>
-                            <input type="text" name="code" class="form-control" 
+                            <input type="text" name="kode_gejala" class="form-control" 
                                 placeholder="Masukan kode gejala"
                                 onkeyup="this.value = this.value.toUpperCase()">
                         </div>

@@ -2,17 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Symptomp;
+use App\Models\Gejala;
 use Illuminate\Http\Request;
 
 class DiagnosisController extends Controller
 {
-    private $symptompModel;
-
-    public function __construct() {
-        $symptompModel = new Symptomp();
-        $this->symptompModel = $symptompModel;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +14,8 @@ class DiagnosisController extends Controller
      */
     public function index()
     {
-        return view('admin.diagnosis.diagnosis');
+        $gejala = Gejala::all();
+        return view('admin.diagnosis.diagnosis', compact('gejala'));
     }
 
     /**
@@ -42,7 +37,12 @@ class DiagnosisController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-        $this->symptompModel->newData($request);
+        // $this->symptompModel->newData($request);
+        Gejala::create([
+            "kriteria"      => $request->kriteria,
+            "kode_gejala"   => $request->kode_gejala,
+            "nama"          => $request->nama,
+        ]);
         return redirect()->back();
     }
 
