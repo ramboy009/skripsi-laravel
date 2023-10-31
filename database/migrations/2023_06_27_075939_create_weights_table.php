@@ -19,7 +19,7 @@ class CreateWeightsTable extends Migration
             // $table->integer('symptomp_id');
             // $table->integer('symptomp_id')->references('id')->on('symptomps');
             $table->foreignId('hepatitis_id')->constrained('hepatitis');
-            $table->foreignId('symptomp_id')->constrained('symptomps');
+            $table->foreignId('gejala_id')->constrained('gejala');
             $table->float('bobot', 8, 2);
             $table->timestamps();
         });
